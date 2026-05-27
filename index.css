@@ -1,0 +1,45 @@
+:root {
+    --primary-bg-color: black;
+    --highlight: orange
+}
+
+@font-face {
+    font-family: minecraft-font;
+    src: url(components/Minecraft.ttf);
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-bg-color);
+    font-family: minecraft-font;
+}
+
+h1 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: white;
+    margin: 5rem;
+    width: 80%;
+}
+
+.flip-phone {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.flip-phone-img {
+    width: 30%;
+}
