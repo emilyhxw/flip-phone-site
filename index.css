@@ -1,6 +1,6 @@
 :root {
     --primary-bg-color: navy;
-    --highlight: orange
+    --highlight: orange;
 }
 
 @font-face {
@@ -75,6 +75,24 @@ h1 {
 
 }
 
+#music-toggle {
+    position: fixed;
+    left: 2rem;
+    top: 2rem;
+    width: 7rem;
+    height: auto;
+    z-index: 10;
+    cursor: pointer;
+    filter: invert();
+    filter: drop-shadow(4px 4px 4px #222);
+    transition: transform 0.2s ease;
+}
+
+.call-link {
+    color: white;
+    text-decoration: underline;
+}
+
 
 @media (min-width: 600px) {
     h1 {
@@ -86,5 +104,11 @@ h1 {
     }
     .flip-logo-img {
         width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .flip-logo-img {
+        width: 30%;
     }
 }

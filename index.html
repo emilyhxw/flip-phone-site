@@ -8,17 +8,36 @@
 
 
     <body>
-        
+        <img id="music-toggle" src="./components/music-icon.png" alt="Play music">
+        <audio id="bg-music" src="./components/wii-sports-theme.mp3" autoplay loop></audio>
+        <script>
+            const music = document.getElementById("bg-music");
+            const musicToggle = document.getElementById("music-toggle");
+
+            musicToggle.addEventListener("click", () => {
+                if (music.paused) {
+                music.play();
+                musicToggle.alt = "Pause music";
+                musicToggle.classList.add("playing");
+                } else {
+                music.pause();
+                musicToggle.alt = "Play music";
+                musicToggle.classList.remove("playing");
+                }
+            });
+        </script>
+
+
         <img id="sparkle-overlay" src="/components/sparkles-sparkle.gif"/>
         <div class="main">
             <div class="flip-phone">
-                <img class="flip-phone-img" src="/components/flip-phone.png"/>
+                <img class="flip-phone-img" src="/components/chatty-phone.png"/>
             </div>
             <h1>for your next event!</h1>
             <div class="flip-logo">
                 <img class="flip-logo-img" src="/components/flip-logo-pixel.png"/>
             </div>
-            <h1>Call to book DJ</h1>
+            <h1><a class="call-link" href="tel:+436764835132">Call</a>&nbsp;to book DJ</h1>
         </div>
     </body>
 
