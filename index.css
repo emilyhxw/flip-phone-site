@@ -1,5 +1,5 @@
 :root {
-    --primary-bg-color: black;
+    --primary-bg-color: navy;
     --highlight: orange
 }
 
@@ -15,6 +15,7 @@ body {
     justify-content: center;
     background-color: var(--primary-bg-color);
     font-family: minecraft-font;
+    overflow: hidden;
 }
 
 h1 {
@@ -22,16 +23,44 @@ h1 {
     display: flex;
     justify-content: center;
     margin-top: 3rem;
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+#sparkle-overlay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
 }
 
 .main {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: column-reverse;
+    justify-content: baseline;
     border-style: solid;
     border-color: white;
-    margin: 5rem;
+    margin-top: 5rem;
     width: 80%;
+}
+
+.flip-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.flip-logo-img {
+    transform: rotate(-30deg);
+    filter: drop-shadow(10px 10px 10px #222);
+    animation: spiiiin 5s infinite;
+}
+
+@keyframes spiiiin {
+    50% {transform: rotate(30deg);}
 }
 
 .flip-phone {
@@ -42,4 +71,20 @@ h1 {
 
 .flip-phone-img {
     width: 30%;
+    filter: drop-shadow(5px 5px 5px #222);
+
+}
+
+
+@media (min-width: 600px) {
+    h1 {
+        font-size: 5rem;
+        text-align: center;
+    }
+    .flip-phone-img {
+        width: 70%;
+    }
+    .flip-logo-img {
+        width: 100%;
+    }
 }
